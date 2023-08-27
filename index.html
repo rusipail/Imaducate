@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            border-collapse: collapse;
+        }
+        div{
+            border: 1px solid black;
+        }
+        #bookTitle{
+            width: calc(90vw - 10px);
+            padding: 10px 0px 10px 10px;
+            font-size: xx-large;
+            font-weight: bold;
+            margin: auto;
+        }
+        #mainContainer{
+            margin: auto;
+            width: 90vw;
+            height: 90vh;
+            display: flex;
+        }
+        #mainContainer > #sentenceContainer{
+            width: 50%;
+        }
+        #imgUploadingContainer{
+            width: 50%;
+            height: 100%;
+            margin: auto;
+        }
+        #sentenceArea{
+            height: 100%;
+            font-size: large;
+            font-weight: bold;
+            line-height: 50px;
+        }
+        #sentenceArea > span:hover{
+            border-bottom: 1px solid rgb(255, 214, 153);
+            color: rgb(255, 214, 153);
+        }
+        img{
+            margin: auto;
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
+            /* max-width: 800px;
+            max-height: 720px; */
+            /* width: 800px;
+            height: 720px; */
+        }
+        #makeImg{
+            margin: auto;
+            position: relative;
+            background-color: rgb(255, 214, 153);
+            border: 0px;
+            border-radius: 15px;
+            padding: 30px 70px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="bookTitle">
+            호두까기 인형
+        </div>
+        <div id="mainContainer">
+            <div id="sentenceContainer">
+                <div id="sentenceArea">
+                    <span>"충실한 나의 부하 북치기 변정이여, 행진곡을 쳐라!" 호두까기 인형이 우렁차게 외치자 즉시 북치는 병정이 가장 기이한 방식으로 북을 둥둥 두드리기 시작해서 유리 장식장의 창문이 흔들리고 위윙거렸다. </span>
+                    <span>그러더니 장식장 안에서 쿵쿵거리고 덜커덩거리는 비상한 소리가 났다.</span>
+                    <span>마리는 이 소리를 듣고서 마침내 프리츠의 군대가 숙영 중이던 전체 상자들의 뚜껑이 힘차게 열렸고 병사들이 몰려나와 맨 아래 칸으로 뛰어내렸으며, 그곳에서도 뺵뺵하게 무리지어 깔끔하게 집합했다는 것 깨닫게 되었다.</span>
+                </div>
+            </div>
+            <div id="imgUploadingContainer">
+                <img src="/호두까기 인형.png">
+            </div>
+        </div>
+    </main>
+    <div>
+        
+    </div>
+    <div>
+
+    </div>
+    <script>
+        fetch("")
+    </script>
+</body>
+</html>
