@@ -1,0 +1,65 @@
+
+main {
+    border-collapse: collapse;
+}
+
+div {
+    border: 1px solid black;
+}
+
+#bookTitle {
+    width: calc(90vw - 10px);
+    padding: 10px 0px 10px 10px;
+    font-size: xx-large;
+    font-weight: bold;
+    margin: auto;
+}
+
+#mainContainer {
+    margin: auto;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+}
+
+#mainContainer > #sentenceContainer {
+    width: 50%;
+}
+
+#imgUploadingContainer {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+
+#sentenceArea {
+    height: 100%;
+    font-size: large;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+#sentenceArea > span:hover {
+    border-bottom: 1px solid rgb(255, 214, 153);
+    color: rgb(255, 214, 153);
+}
+
+img {
+    margin: auto;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    /* max-width: 800px;
+    max-height: 720px; */
+    /* width: 800px;
+    height: 720px; */
+}
+
+#makeImg {
+    margin: auto;
+    position: relative;
+    background-color: rgb(255, 214, 153);
+    border: 0px;
+    border-radius: 15px;
+    padding: 30px 70px;
+}
