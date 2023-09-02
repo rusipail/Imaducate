@@ -38,14 +38,68 @@
             </div>
         </div>
     <div>
-        <img src="/free-icon-left-arrow-271220.svg" id="leftArrow">
+        <img src="/free-icon-left-arrow-271220.svg" id="leftArrow" class="none">
         <img src="/free-icon-right-arrow-271228.svg" id="rightArrow">
     </div>
-    <script>
+    <script lang="ts">
         const sideBar = document.querySelector("#hamburger");
+        const book_id = 0;
+        let book_page = 0;
+        let content = {
+            title: Text,
+            text: Text,
+            img: URL
+        }
+
+        const span  = document.querySelectorAll("span");
+        const left = document.querySelector("#leftArrow");
+        const right = document.querySelector("#rightArrow");
+        for(let i = 0; i < span.length; i++){
+            span[i].addEventListener("click", () => {
+                const text = span[i].textContent;
+                fetch(`/view/${book_id}/${book_page}?text=${text}`);
+                console.log(`/view/${book_id}/${book_page}?text=${text}`);
+                // GET /view/{book_id}/{book_page}?text={text}
+                //그냥 위에 주소로 요청을 보낸 코드입니다
+            })
+        }
+        main = () =>{
+            if(book_page <= 0){
+                left.classList.add("none");
+            }
+        }
+        left.addEventListener("click", () =>{
+            if (book_page <= 0) return;
+            book_page--;
+            let content = fetch(`/content/${book_id}/${book_page}`); // GET /content/{book_id}/{book_page}
+            content
+            /*
+            content = {
+                title: "",
+                text: "",
+                img: "<url>"
+            }
+            */
+        })
+        right.addEventListener("click", () =>{
+            book_page++;
+            left.classList.remove("none");
+            let content = undefined;
+            fetch(`/content/${book_id}/${book_page}`); // GET /content/{book_id}/{book_page}
+            
+            /*
+            content = {
+                title: "",
+                text: "",
+                img: "<url>"
+            }
+            */
+        })
+        console.log(span)
         sideBar.addEventListener("click", ()=>{
             sideBar.parentElement.classList.toggle("shrink")
         })
+        main();
     </script>
 </body>
 </html>

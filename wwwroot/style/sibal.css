@@ -176,3 +176,6 @@ div {
 #titleContainer{
     margin-right: 100px;
 }
+.none{
+    display: none;
+}
