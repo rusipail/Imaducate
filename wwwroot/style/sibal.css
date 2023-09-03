@@ -33,7 +33,7 @@
     text-align: center;
     margin: 20px 0px;
     padding: 20px 0px;
-    background-color: rgb(255, 214, 153);
+    background-color: #828Cd8;
 }
 #titleBar{
     
@@ -67,12 +67,16 @@ div {
     /* text-align: right;
     display: flex;
     justify-content: space-between; */
+    /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
+.title{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #mainContainer {
     padding-top: 60px;
     margin: auto;
+    margin-left: 80px;
     width: 80vw;
     height: 80vh;
     display: flex;
@@ -100,15 +104,15 @@ div {
 }
 
 #sentenceArea > span:hover {
-    border-bottom: 1px solid rgb(255, 214, 153);
-    color: rgb(255, 214, 153);
+    border-bottom: 1px solid #828Cd8;
+    color: #828Cd8;
 }
 #sentenceArea > span{
     margin: 15px;
     font-size: 24px;
 }
 .img {
-    margin-left: 80px;
+    margin-left: 90px;
     /* object-fit: fill; */
     /* position: flex;
     justify-content: center;
@@ -117,7 +121,7 @@ div {
     height: calc(100% - 40px);
     /* padding: 40px;
     padding-top: 0px; */
-    border-radius: 15%;
+    border-radius: 10%;
     border: 1px solid black;
     
 }
@@ -136,17 +140,19 @@ div {
 #leftArrow{
     top: calc(50% - 30px);
     left: 130px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 15px;
 }
 #rightArrow{
     top:calc(50% - 30px);
     right: 40px;
-    padding-left: 12px;
+    padding-left: 15px;
+    padding-right: 5fpx;
 }
 #imgContainer {
     margin: auto;
     position: relative;
-    background-color: rgb(255, 214, 153);
+    background-color: rgb(30, 30, 30);
     border: 0px;
     border-radius: 15px;
     padding: 30px 70px;
@@ -165,10 +171,12 @@ div {
 } */
 #author{
     padding: 10px;
-    font-size: 20px;
-    font-weight: lighter;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+    /* font-family:    ; */
 
+}
+.option:hover{
+    opacity: 0.7;
 }
 #hamburger{
     width: 40px;

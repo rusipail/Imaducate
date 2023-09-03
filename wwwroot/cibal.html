@@ -12,9 +12,9 @@
     <div id="sideBar">
         <img src="/free-icon-hamburger-5135168.svg" id="hamburger">
         <div id="optionContainer">
-            <div class="option">시</div>
-            <div class="option">문학</div>
-            <div class="option">비문학</div>
+            <div class="option">호두까기 인형</div>
+            <div class="option">추후 추가 예정</div>
+            <div class="option">추후 추가 예정</div>
         </div>
     </div>
     <div id="container">
@@ -74,22 +74,23 @@
                 if (book_page <= 0) {
                     left.classList.add("none");
                 }
-                author.innerHTML += content.author;
-                title.innerHTML += content.title;
+                author.innerHTML = content.author;
+                title.innerHTML = content.title;
                 img.src = content.img;
                 // txt.innerHTML = content.text;
+                txt.innerHTML = '';
                 content.text.split('.').forEach(s => {
                     const sp = document.createElement("span");
                     sp.textContent = s;
                     txt.appendChild(sp);
                 })
-                var span = document.querySelectorAll("span");
+                var span = document.querySelectorAll("#sentenceArea > span");
                 for (let i = 0; i < span.length; i++) {
                     span[i].addEventListener("click", () => {
                         const text = span[i].textContent;
                         fetch(`/view/${book_id}/${book_page}?text=${text}`);
                         console.log(`/view/${book_id}/${book_page}?text=${text}`);
-                        alert("sex");
+                        // alert("sex");
                         // GET /view/{book_id}/{book_page}?text={text}
                         //그냥 위에 주소로 요청을 보낸 코드입니다
                     })
@@ -101,8 +102,8 @@
                     return;
                 }
                 book_page--;
-                content = await (await fetch(`/content/${book_id}/${book_page}`)).json(); // GET /content/{book_id}/{book_page}
-                title.innerHTML += content.title;
+                // content = await (await fetch(`/content/${book_id}/${book_page}`)).json(); // GET /content/{book_id}/{book_page}
+                // title.innerHTML = content.title;
                 main();
 
 
@@ -117,7 +118,7 @@
             right.addEventListener("click", () => {
                 book_page++;
                 left.classList.remove("none");
-                content = fetch(`/content/${book_id}/${book_page}`); // GET /content/{book_id}/{book_page}
+                // content = fetch(`/content/${book_id}/${book_page}`); // GET /content/{book_id}/{book_page}
                 main();
                 /*
                 content = {
